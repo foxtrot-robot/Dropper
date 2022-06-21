@@ -9,7 +9,10 @@ project ("Dropper")
 add_executable (Dropper 
 	"Main.cpp" 
 	"Includes.h"
- "Config.h" "Dropper.cpp" "Dropper.h")
+	"Config.h" 
+	"Dropper.cpp" 
+	"Dropper.h"
+)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET Dropper PROPERTY CXX_STANDARD 20)
