@@ -1,6 +1,6 @@
 # Dropper
 
-Definition of a dropper: _"A dropper is a kind of Trojan that has been designed to "install" some sort of malware to a target system. The malware code can be contained within the dropper in such a way as to avoid detection by virus scanners or the dropper may download the malware to the target machine once activated. Wikipedia"_
+Definition of a dropper: *"A dropper is a kind of Trojan that has been designed to "install" some sort of malware to a target system. The malware code can be contained within the dropper in such a way as to avoid detection by virus scanners or the dropper may download the malware to the target machine once activated. Wikipedia"*
 
 ## FAQ 📖
 
